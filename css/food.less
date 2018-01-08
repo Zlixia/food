@@ -1,0 +1,770 @@
+body {
+  height: 100%;
+  margin: 0 auto;
+  padding: 50px 48px 0;
+  color: #333333;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+//头部部分
+.header {
+  float: left;
+  width: 160px;
+  margin-bottom: 25px;
+  > h1 {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    margin-top: 0;
+    background: url("../imgs/food-logo.png") 0 0 no-repeat;
+  }
+  > nav {
+    display: block;
+    width: 160px;
+    position: absolute;
+    top: 158px;
+    left: 0;
+    > ul {
+      width: 100%;
+      padding: 0;
+      > li {
+        width: 100%;
+        margin-bottom: 18px;
+        height: 32px;
+        line-height: 32px;
+        background: url("../imgs/nav1.png") left center no-repeat;
+
+        transition: all 0.2s ease-in;
+        &:nth-child(2) {
+          background: url("../imgs/nav2.png") left center no-repeat;
+        }
+        &:nth-child(3) {
+          background: url("../imgs/nav3.png") left center no-repeat;
+        }
+        &:nth-child(4) {
+          background: url("../imgs/nav4.png") left center no-repeat;
+        }
+        &:nth-child(5) {
+          margin-bottom: 0px;
+          background: url("../imgs/nav5.png") left center no-repeat;
+        }
+        > a {
+          font-style: italic;
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          font-size: 14px;
+          color: #59BBAB;
+          padding-left: 50px;
+          box-sizing: border-box;
+        }
+      }
+      > li:hover {
+        background-position: 8px 0;
+        > a {
+          color: #EC6635;
+        }
+      }
+    }
+  }
+}
+
+//内容部分
+.content {
+  float: right;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  position: relative;
+  height: 510px;
+  //轮播图
+  > .lbt_wrap {
+    width: 100%;
+    height: 446px;
+    position: relative;
+    > .lbt {
+      width: 896px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      > img {
+        width: 100%;
+      }
+      > a {
+        font-style: italic;
+        position: absolute;
+        top: 274px;
+        left: 0;
+        > h1 {
+          margin: 0;
+          display: inline-block;
+          top: 285px;
+          padding: 10px 24px 15px;
+          color: #222;
+          background-color: #FFFFFF;
+          font-size: 1.5em;
+        }
+        > h2 {
+          display: block;
+          /*top:334px;*/
+          padding: 8px 24px 12px;
+          color: #e9e9e9;
+          background-color: #000000;
+          font-size: 1em;
+        }
+      }
+      > p {
+        position: absolute;
+        display: inline-block;
+        right: 10px;
+        bottom: 20px;
+        padding: 5px 8px;
+        border-radius: 5px;
+        background-color: lightgray;
+        opacity: 0.5;
+        font-size: 12px;
+        color: darkgray;
+      }
+    }
+  }
+  > .pointer {
+    overflow: hidden;
+    > ul {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      > li {
+        float: left;
+        border-right: 1px solid #D3EDE9;
+        background-color: #EFF8F7;
+        &:nth-child(1) {
+          background-color: #D9EFEC;
+        }
+        a {
+          display: inline-block;
+          color: #60BEAE;
+          > p {
+            font-size: 12px;
+          }
+        }
+      }
+      > li:hover {
+        background-color: #D9EFEC;
+        > a {
+          color: #C3807C;
+        }
+      }
+    }
+  }
+}
+
+//内容中间部分
+.newsletter {
+  overflow: hidden;
+  width: 100%;
+  min-height: 48px;
+  margin-bottom: 29px;
+  border-top: 1px dashed #e5e5e5;
+  border-bottom: 1px dashed #e5e5e5;
+  background: url("../imgs/letter.png") 18px 7px no-repeat;
+  > p {
+    float: left;
+    width: 55%;
+    padding: 9px 24px 0 66px;
+    font-size: 0.75em;
+  }
+  > form {
+    margin-left: 11px;
+    margin-top: 11px;
+    float: left;
+    display: inline-block;
+    > input:nth-child(1) {
+      padding-left: 6px;
+      outline: none;
+    }
+    > input:nth-child(2) {
+      margin-left: 10px;
+      font-size: 12px;
+      padding: 3px 10px;
+      border-radius: 4px;
+      border: 1px solid;
+      cursor: pointer;
+      outline: none;
+      border-color: #ddd #bbb #999;
+      text-shadow: #fff 0 1px 1px;
+      position: relative;
+      top: -1px;
+    }
+  }
+}
+
+//内容最后部分
+.blog {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 18px;
+  > .article {
+    float: left;
+    width: 23%;
+    margin: 0 23px 25px 0;
+    > a {
+      width: 100%;
+      display: inline-block;
+      color: #34B3C1;
+      > img {
+        width: 100%;
+        border: 1px solid #B6B4B6;
+        transition: all 0.2s ease;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+      > h5 {
+        font-size: 15px;
+        padding: 10px 0 10px;
+      }
+    }
+    > a:hover {
+      color: #C3807C;
+    }
+    > p {
+      font-size: 12px;
+      line-height: 19px;
+    }
+    > .time {
+      padding-top: 10px;
+      font-weight: inherit;
+      color: #B1AAAA;
+      > a {
+        display: inline-block;
+        height: 23px;
+        border-bottom: 1px dashed #e9e9e9;
+        color: #34B3C1;
+        &:hover {
+          color: #C3807C;
+        }
+      }
+    }
+  }
+  :nth-child(4) {
+    margin-right: 0;
+  }
+}
+
+//侧边栏部分
+.aside {
+  width: 160px;
+  float: left;
+  margin-top: 280px;
+  > .section1 {
+    width: 100%;
+    margin-bottom: 30px;
+    > h1 {
+      width: 140px;
+      font-size: 14px;
+      font-weight: 100;
+      border-bottom: 1px dashed #E5E5E5;
+      padding-bottom: 10px;
+    }
+    > a {
+      font-size: 12px;
+      display: inline-block;
+      width: 140px;
+      height: 30px;
+      line-height: 30px;
+      padding-left: 25px;
+      border: 1px solid #E5E5E5;
+      border-radius: 4px;
+      color: #34AC98;
+      font-style: italic;
+      background: url("../imgs/icon-twitter-16-w59.png") 4px 8px no-repeat;
+      &:hover {
+        background-color: #eff8f7;
+      }
+    }
+  }
+  > .section2 {
+    width: 100%;
+    > h1 {
+      font-weight: 100;
+      width: 140px;
+      font-size: 14px;
+      border-bottom: 1px dashed #E5E5E5;
+      padding-bottom: 10px;
+    }
+    > p {
+      width: 140px;
+      line-height: 20px;
+      font-size: 12px;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    > a {
+      font-size: 12px;
+      display: inline-block;
+      width: 140px;
+      height: 30px;
+      line-height: 30px;
+      padding-left: 25px;
+      border: 1px solid #E5E5E5;
+      border-radius: 4px;
+      color: #34AC98;
+      font-style: italic;
+      background: url("../imgs/icon-facebook-16-w60.png") 4px 8px no-repeat;
+      &:hover {
+        background-color: #eff8f7;
+      }
+    }
+  }
+}
+
+//尾部部分
+.footer {
+  width: 100%;
+  min-height: 90px;
+  clear: both;
+  position: relative;
+  padding-top: 20px;
+  border-top: 2px solid #E5E5E5;
+  > p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #B1AAAA;
+    > a {
+      font-size: 13px;
+      color: #34B3C1;
+      &:hover {
+        color: #C3807C;
+      }
+    }
+  }
+  > div {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    > a {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      opacity: 0.4;
+      transition: all 0.2s ease;
+      &:nth-child(1) {
+        background: url("../imgs/footer1.png") no-repeat 50% 1px;
+      }
+      &:nth-child(2) {
+        background: url("../imgs/footer2.png") no-repeat 50% 1px;
+      }
+      &:nth-child(3) {
+        background: url("../imgs/footer3.png") no-repeat 50% 1px;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1176px) {
+  body {
+    width: 1176px;
+  }
+
+  .wrap {
+    width: 1080px;
+  }
+
+  .content {
+    width: 896px;
+    float: right;
+  }
+
+  .slide {
+    height: 560px;
+    .pointer li {
+      padding: 25px 12px 0 20px;
+      > a {
+        display: inline-block;
+        width: 191px;
+        height: 60px;
+        > p {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .newsletter {
+    > .form {
+      > input:nth-child(1) {
+        width: 260px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1175px) and (min-width: 992px) {
+  body {
+    width: 992px;
+  }
+
+  .wrap {
+    width: 896px;
+  }
+
+  .header > .nav > ul > li:hover {
+    background-position-x: 10px;
+    color: red;
+  }
+
+  .content {
+    width: 712px;
+    float: right;
+    .slide {
+      height: 510px;
+      .pointer li {
+        text-align: center;
+        padding: 8px 0 2px;
+        > a {
+          display: inline-block;
+          width: 177px;
+          height: 25px;
+          > p {
+            display: none;
+          }
+        }
+      }
+    }
+    .newsletter {
+      > .form {
+        > input:nth-child(1) {
+          width: 160px;
+        }
+      }
+    }
+    .blog {
+      > .article {
+        width: 160px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  body {
+    width: 712px;
+    padding: 20px 28px 0;
+  }
+
+  .wrap {
+    width: 712px;
+  }
+
+  .header {
+    width: 100%;
+    height: 120px;
+  }
+
+  .header > .nav {
+    width: 480px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    left: 230px;
+    padding-top: 23px;
+  }
+
+  .header > .nav > ul {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .header > .nav > ul > li {
+    background-position: 50% 17%;
+    height: 70px;
+    width: 96px;
+    float: left;
+    text-align: center;
+    &:nth-child(2) {
+      background-position: 50% 17%;
+    }
+    &:nth-child(3) {
+      background-position: 50% 17%;
+    }
+    &:nth-child(4) {
+      background-position: 50% 17%;
+    }
+    &:nth-child(5) {
+      background-position: 50% 17%;
+    }
+  }
+
+  .header > .nav > ul > li > a {
+    display: inline;
+    line-height: 120px;
+    font-style: italic;
+    padding: 0;
+  }
+
+  .header > .nav > ul > li:hover {
+    background-position: 50% 29%;
+  }
+
+  .slide {
+    .pointer li {
+      text-align: center;
+      padding: 8px 0 2px;
+      > a {
+        display: inline-block;
+        width: 177px;
+        height: 25px;
+        > p {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .aside {
+    display: none;
+  }
+
+  .newsletter {
+    > .form {
+      > input:nth-child(1) {
+        width: 160px;
+      }
+    }
+  }
+
+  .blog {
+    > .article {
+      width: 160px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 480px) {
+  body, .wrap {
+    width: 480px;
+  }
+
+  .aside {
+    display: none;
+  }
+
+  .header {
+    width: 100%;
+    height: 120px;
+    position: relative;
+  }
+
+  .header > .nav {
+    width: 350px;
+    position: absolute;
+    top: 40px;
+    left: 136px;
+  }
+
+  .header > .nav > ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header > .nav > ul > li {
+    padding: 0;
+    text-align: center;
+    background-image: none !important;
+    > a {
+      display: inline;
+      font-size: 12px;
+      padding: 0;
+    }
+  }
+
+  //轮播图
+  .slide {
+    height: 310px;
+    > .lbt_wrap {
+      > .lbt {
+        > img {
+          max-width: 500px;
+        }
+        > a {
+          width: 480px;
+          opacity: 0.7;
+          top: 212px;
+          &:hover {
+            opacity: 0.4;
+          }
+          > h1 {
+            font-size: 14px;
+            width: 100%;
+            padding: 10px 0 10px 5px;
+          }
+          > h2 {
+            font-size: 12px;
+            padding-left: 0;
+          }
+        }
+        > .credit {
+          right: 415px;
+          top: 286px;
+          background-color: #FFFFFF;
+        }
+      }
+    }
+    > .pointer {
+      display: none;
+    }
+  }
+
+  //email
+  .newsletter {
+    > p {
+      width: 100%;
+      padding: 14px 15px 0 63px;
+    }
+    > form {
+      margin-top: 15px;
+      padding-left: 13px;
+      margin-bottom: 20px;
+      > input:nth-child(1) {
+        width: 315px;
+      }
+    }
+  }
+
+  //最后内容部分
+  .blog {
+    margin-left: 12px;
+    > .article {
+      width: 216px;
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+      &:nth-child(4) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body, .wrap {
+    width: 320px;
+    padding: 0;
+  }
+
+  .aside {
+    display: none;
+  }
+
+  .header {
+    width: 100%;
+    height: 120px;
+    position: relative;
+    padding-left: 100px;
+    margin-top: 70px;
+  }
+  .header > .nav {
+    width: 100%;
+    height: 41px;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .header > .nav > ul {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .header > .nav > ul > li {
+    height: 100%;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: none !important;
+    > a {
+      display: inline;
+      font-size: 12px;
+      padding: 0;
+    }
+  }
+
+  //轮播图
+  .slide {
+    height: 310px;
+    > .lbt_wrap {
+      > .lbt {
+        > img {
+          max-width: 500px;
+        }
+        > a {
+          width: 480px;
+          opacity: 0.7;
+          top: 212px;
+          &:hover {
+            opacity: 0.4;
+          }
+          > h1 {
+            font-size: 14px;
+            width: 100%;
+            padding: 10px 0 10px 5px;
+          }
+          > h2 {
+            font-size: 12px;
+            padding-left: 0;
+          }
+        }
+        > .credit {
+          right: 575px;
+          top: 286px;
+          background-color: #FFFFFF;
+        }
+      }
+    }
+    > .pointer {
+      display: none;
+    }
+  }
+
+  //email
+  .newsletter {
+    background-position:20px 14px;
+    > p {
+      width: 100%;
+      padding: 14px 15px 0 63px;
+    }
+    > form {
+      margin-top: 15px;
+      padding-left: 13px;
+      margin-bottom: 20px;
+      > input:nth-child(1) {
+        width: 160px;
+      }
+    }
+  }
+
+  //内容最后部分
+  .blog{
+    >.article{
+      width: 280px;
+      margin:0 20px 25px 20px;
+    }
+  }
+
+}
+
